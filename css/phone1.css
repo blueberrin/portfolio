@@ -1,0 +1,60 @@
+.navbar ul{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.navbar ul li {
+    font-size: 0.7rem;
+}
+
+.heading, .me {
+    font-size: 1.3rem;
+}
+
+.slideshow-container img {
+    width: 50%;
+    height: 50%;
+}
+
+
+#about {
+    flex-direction: column;
+    margin: 0%;
+    
+}
+
+.text-container {
+    margin-left: 10px;
+}
+
+#about img {
+    width: 200px;
+    height: 150px;
+    margin-left: 0%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#about p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.0rem;
+    width: 82%;
+    text-align: justify;
+    color: #214151;
+    font-family: 'Secular One', sans-serif;
+    line-height: 2.0;
+}
+
+.fname {
+    margin-top: 0;
+    text-align: justify;
+    width: 82%;
+    color: #214151;
+    font-size: 1.1rem;
+    font-family: 'Secular One', sans-serif;
+  }
+
+
+
+

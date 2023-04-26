@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    font-size: 12px;
+}
+
+.navbar ul li a {
+    color: #214151;
+    font-family: 'Dela Gothic One', cursive;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    letter-spacing: 2px;
+	
+}
+
+.navbar ul li a:hover {
+    color: #577D86;
+}
+
+#about {
+    padding-top: 11%;
+    padding-bottom: 11%;
+    background-color: #E9EDC9;  
+}

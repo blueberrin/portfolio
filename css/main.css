@@ -1,0 +1,392 @@
+*{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #EFF7E1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li {
+    font-size: 1.1rem;
+}
+
+.navbar ul li a {
+    color: #214151;
+    font-family: 'Dela Gothic One', cursive;
+    display: block;
+    padding: 14px 16px;
+    text-decoration: none;
+    letter-spacing: 2px;
+	
+}
+
+.navbar ul li a:hover {
+    color: #577D86;
+}
+
+/* home css */
+
+#home{
+
+    padding-top: 15%;
+    padding-bottom: 15%;
+
+}
+
+
+.heading, .me {
+    text-align: center; 
+    color: #C58940;
+    font-family: 'Secular One', sans-serif;
+    letter-spacing: 5px;
+}
+
+.heading {
+    font-size: 50px;
+}
+
+.me {
+    font-size: 30px;
+}
+
+.resume {
+    font-size: 20px;
+    text-align: center; 
+    color: #C58940;
+    font-family: 'Secular One', sans-serif;
+    letter-spacing: 5px;
+}
+
+/* about css */
+
+#about {
+    padding-top: 11%;
+    padding-bottom: 11%;
+    background-color: #E9EDC9;  
+}
+
+#about img {
+    width: 250px;
+    margin-left: 12%;
+    display: inline-block;
+    vertical-align: middle;
+   
+}
+
+.abt-container {
+    display: flex;
+    align-items: center;
+}
+  
+  
+#about p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    width: 82%;
+    text-align: justify;
+    color: #214151;
+    font-family: 'Secular One', sans-serif;
+    line-height: 2.0;
+}
+
+.text-container {
+    margin-left: 20px;
+  }
+  
+.fname {
+    margin-top: 0;
+    text-align: justify;
+    color: #214151;
+    font-size: 25px;
+    font-family: 'Secular One', sans-serif;
+  }
+
+/* education css */
+
+#education {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#education h2 {
+    font-family: 'Secular One', sans-serif;
+    color: #214151;
+    letter-spacing: 2px;
+}
+
+#education p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    text-align: justify;
+    color: #214151;
+    font-family: 'Secular One', sans-serif;
+    line-height: 2.0;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #E9EDC9;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #E9EDC9;
+    border: 4px solid #C58940;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+    left: 0;
+}
+
+/* Place the container to the right */
+.right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid #E9EDC9;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #E9EDC9;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid #E9EDC9;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #E9EDC9 transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.content {
+    padding: 20px 30px;
+    background-color: #E9EDC9;
+    position: relative;
+    border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+.timeline::after {
+    left: 31px;
+ }
+  
+  /* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+ }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid #E9EDC9;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #E9EDC9#E9EDC9 transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+/* projects css */
+
+#projects {
+    padding-top: 6%;
+    padding-bottom: 6%;
+    background-color: #E9EDC9;
+    
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #214151;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(162, 208, 193, .4);
+  }
+  
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+.mySlides {display: none}
+
+.img-proj {vertical-align: middle;}
+
+/* contact css */
+
+#contact {
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.contact {
+    text-align: center;
+
+
+}
+
+i {
+    margin-right: 10px;
+  }
+
+/* footer css */
+
+footer {
+    text-align: center;
+}
+
+.credit {
+    color: #C58940;
+    font-family: 'Secular One', sans-serif;
+    
+}

@@ -1,0 +1,43 @@
+/* about css */
+
+#about img {
+    width: 250px;
+    margin-left: 12%;
+    display: inline-block;
+    vertical-align: middle;
+   
+}
+
+.heading {
+
+    font-size: 45px;
+}
+
+.abt-container {
+    display: flex;
+    align-items: center;
+}
+  
+  
+#about p {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 20px;
+    width: 82%;
+    text-align: justify;
+    color: #214151;
+    font-family: 'Secular One', sans-serif;
+    line-height: 2.0;
+}
+
+.text-container {
+    margin-left: 20px;
+  }
+  
+.fname {
+    margin-top: 0;
+    text-align: justify;
+    color: #214151;
+    font-size: 1.7rem;
+    font-family: 'Secular One', sans-serif;
+}
